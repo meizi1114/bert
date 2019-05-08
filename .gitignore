@@ -7,7 +7,14 @@ __pycache__/
 
 # C extensions
 *.so
+*.zip
+chinese_L-12_H-768_A-12/
+multi_cased_L-12_H-768_A-12/
+chinese_L-12_H-768_A-12/
+uncased_L-12_H-768_A-12_bak/
 
+glue_data_bak/
+glue_data/
 # Distribution / packaging
 .Python
 build/
