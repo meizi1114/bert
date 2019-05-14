@@ -14,7 +14,7 @@ multi_cased_L-12_H-768_A-12/
 #uncased_L-12_H-768_A-12_bak/
 
 glue_data_bak/
-#glue_data/
+glue_data/
 # Distribution / packaging
 .Python
 build/
