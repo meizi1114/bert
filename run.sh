@@ -1,9 +1,9 @@
 export GLUE_DIR=/glue_data
 export BERT_BASE_DIR=/data/duobi/bert/uncased_L-12_H-768_A-12
-export BERT_BASE_DIR=chinese_L-12_H-768_A-12
-CUDA_VISIBLE_DEVICES=1,3 python run_mtl.py --task_name=mtl --do_predict=true --data_dir=$GLUE_DIR/Chat --vocab_file=$BERT_BASE_DIR/vocab.txt --bert_config_file=$BERT_BASE_DIR/bert_config.json --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt --max_seq_length=128 --output_dir=/data/jingmo/mrpc_output
+#export BERT_BASE_DIR=chinese_L-12_H-768_A-12
+#CUDA_VISIBLE_DEVICES=1,3 python run_mtl.py --task_name=mtl --do_predict=true --data_dir=$GLUE_DIR/Chat --vocab_file=$BERT_BASE_DIR/vocab.txt --bert_config_file=$BERT_BASE_DIR/bert_config.json --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt --max_seq_length=128 --output_dir=/data/jingmo/mrpc_output
 #export TRAINED_CLASSIFIER=/data/duobi/mrpc_output
-#CUDA_VISIBLE_DEVICES=1 python run_classifier.py --task_name=MRPC --do_train=true --do_eval=true --data_dir=$GLUE_DIR/MRPC --vocab_file=$BERT_BASE_DIR/vocab.txt --bert_config_file=$BERT_BASE_DIR/bert_config.json --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt --max_seq_length=128 --train_batch_size=32 --learning_rate=2e-5 --num_train_epochs=3.0 --output_dir=/data/duobi/mrpc_output
+CUDA_VISIBLE_DEVICES=1 python run_classifier.py --task_name=MRPC --do_train=true --do_eval=true --data_dir=$GLUE_DIR/MRPC --vocab_file=$BERT_BASE_DIR/vocab.txt --bert_config_file=$BERT_BASE_DIR/bert_config.json --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt --max_seq_length=128 --train_batch_size=32 --learning_rate=2e-5 --num_train_epochs=3.0 --output_dir=/data/jingmo/bert/mrpc_output
 #python run_classifier.py --task_name=MRPC --do_predict=true --data_dir=$GLUE_DIR/MRPC --vocab_file=$BERT_BASE_DIR/vocab.txt --bert_config_file=$BERT_BASE_DIR/bert_config.json --init_checkpoint=$TRAINED_CLASSIFIER --max_seq_length=128 --output_dir=/data/duobi/mrpc_output
 
 #rm -r /data/duobi/mrpc_output; CUDA_VISIBLE_DEVICES=1,2,3 python run_sentvec.py --task_name=QA --do_train=true --do_eval=false --data_dir=$GLUE_DIR/Chat --vocab_file=$BERT_BASE_DIR/vocab.txt --bert_config_file=$BERT_BASE_DIR/bert_config.json --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt --max_seq_length=128 --train_batch_size=32 --learning_rate=2e-5 --num_train_epochs=9.0 --output_dir=/data/duobi/mrpc_output
