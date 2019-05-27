@@ -1,4 +1,4 @@
-export GLUE_DIR=/glue_data
+export GLUE_DIR=/data/jingmo/bert//glue_data
 export BERT_BASE_DIR=/data/jingmo/bert/uncased_L-12_H-768_A-12
 #export BERT_BASE_DIR=chinese_L-12_H-768_A-12
 #CUDA_VISIBLE_DEVICES=1,3 python run_mtl.py --task_name=mtl --do_predict=true --data_dir=$GLUE_DIR/Chat --vocab_file=$BERT_BASE_DIR/vocab.txt --bert_config_file=$BERT_BASE_DIR/bert_config.json --init_checkpoint=$BERT_BASE_DIR/bert_model.ckpt --max_seq_length=128 --output_dir=/data/jingmo/mrpc_output
